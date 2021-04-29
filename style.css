@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #eee;
+}
+::selection{
+    background-color: aqua;
+    color: #fff;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #eee;
+}
+::-webkit-scrollbar-thumb{
+    background-color: antiquewhite;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(248, 220, 183);
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: rgb(250, 187, 106);
+}
+.container{
+    width: 100%;
+    padding: 0 10%;
+    margin: auto;
+}
+/* active */
+.active {
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid crimson;
+}
+
+.hospital{
+    width: 100%;
+    margin:  auto;
+    padding: auto;
+}
+header{
+    width: 100%;
+    padding: 5px 10%;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
+    background-color: rgb(8, 218, 233);
+    justify-content: space-between;
+    filter: drop-shadow(1px 2px 5px rgba(0,0,0,0.5));
+}
+header .logo{
+    height: 30px;
+    filter: drop-shadow(1px 2px 3px rgba(5, 5, 5, 0.233));
+}
+header .logo h4{
+    font-size: 25px;
+    color: red;
+    font-family: cursive;
+}
+.logo span{
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 60px;
+    color: rgb(247, 230, 2);
+}
+
+nav{
+    display: flex
+}
+nav li{
+    padding:  10px;
+    list-style: none
+}
+nav li a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+nav li a:hover{
+    color: rgb(2, 4, 24);
+}
+/* sub background */
+.bg{
+    width: 100%;
+    height: 60vh;
+    background-image: url(img/medical.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.bg .content{
+    width: 100%;
+    padding: 0 10%;
+}
+.bg .container h1{
+    position: absolute;
+    margin-top: 180px;
+    font-size: 3rem;
+    color: rgb(126, 6, 46);
+}
+.bg h2{
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: rgb(236, 219, 225);
+}
+.bg h2 span{
+    position: relative;
+    margin-top: 250px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: rgb(126, 6, 46);
+}
+/* front-page */
+section{
+    width: 100%;
+}
+section .main{
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    overflow: hidden;
+    justify-content:space-between ;
+    background-image: url(img/hospital.jpeg);
+    background-size: cover;
+    background-attachment: scroll;
+}
+.main .content{
+    width: 60%;
+    text-align: justify;   
+    padding: 10px 0;
+    margin-top: 20%;
+
+}
+.main .content h2{
+    padding:  5px 0;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.main .content h1{
+    padding:  5px 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(8, 218, 233);
+    letter-spacing: 1.5px;
+}
+.main .content h4{
+    padding:  5px 0;
+    font-size: 23px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.main .content p{
+    padding:  15px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+button{
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+    border: 2px solid blue;
+    outline: none;
+    color: #fff;
+    background: blue;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+button:hover{
+    background:transparent;
+    color: blue;
+}
+.main .img{
+    width: 40%;
+    /* padding: 0 50px; */
+    margin-top: 10.9%;
+}
+.main .img img{
+    width: 540px;
+    transform: rotateY(180deg);
+}
+
+/* srvices */
+.services {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+}
+.services .head{
+    margin: 0 10px;
+    padding: 10px 0;
+    text-align: center;
+}
+.services .head .title{
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 1.375rem;
+    text-transform: capitalize;
+    color: blue;
+}
+.services .head .title ::before{
+    content: "";
+    position: absolute;
+    text-align: center;
+    height: 2px;
+    width: 100px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    background-color: blue;
+}
+.services .head .para{
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.pic{
+    width: 100%;
+    padding: 0 0px;
+
+}
+.pic .box-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+    border-radius: 7px;
+}
+.pic .box-1 .card-1{
+    text-align: center;
+    width: 33%;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+.pic .box-1 .card-1:hover{
+    transform: scale(1.05);
+}
+.pic .box-1 .card-1 .img img{
+    width: 99%;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -5px;
+}
+.cap{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.cap h3{
+    height: 35px;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color: blue;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0 0 10px 10px;
+}
+
+/* about */
+.about {
+    width: 100%;
+    padding: 20px 0;
+    margin: auto;
+}
+.about .about-content{
+    width: 100%;
+    padding: 10px 0;
+}
+.about .about-content .title{
+    padding: 10px 0;
+    text-align: left;
+    text-transform: capitalize;
+    color: blue;
+    font-size: 30px;
+
+}
+.about .about-content .title h2{
+    font-weight: 550;
+    font-variant: normal;
+    text-decoration: none;
+}
+.about .about-content .para{
+    padding: 0;
+}
+.about .about-content .para p{
+    padding: 10px 0;
+    line-height: 25px;
+
+}
+.card-3{
+    padding: 10px 0;
+}
+.card-3 .card-title h2{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 10px 0;
+}
+.card-3 .card-title h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.623);
+}
+.card-field{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-field .pic{
+    width: 20%;
+}
+.card-field .pic img{
+    width: 100%;
+}
+.card-field .info{
+    padding-top: 40px;
+    padding-left: 20px;
+}
+.card-field .info h2{
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-display: normal;
+    color: blue;
+}
+.card-field .info p{
+    color: gray;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.card-field .info h5{
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* contact */
+.contact{
+    background-color: #fff;
+}
+.contact .title {
+    text-align: left;
+    padding: 30px 0;
+    text-align: center;
+}
+.contact .title h1{
+    margin: 50px 0;
+    padding: 10px 0;
+    position: relative;
+    color: blue;
+    text-transform: capitalize;
+}
+.contact .title h1::after{
+    position: absolute;
+    content: " ";
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    background-color: blue;
+}
+.contact  .para p{
+    margin-right: 60px;
+    padding: 10px 0;
+}
+
+
+.contact .form{
+    width: 100%;
+    padding: 20px;
+}
+.contact .form form{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact .form form div{
+    margin:  0 10px;
+    width: 45%;
+    padding: 20px 0;
+    
+}
+.contact .form form input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    outline: none;
+    font-size: 17px;
+    color: #111;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 1px solid grey;
+}.contact .form form .msg{
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+}
+.contact .form form textarea{
+   
+    resize:  none;
+    height: 120px;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    font-size: 17px;
+    color: #111;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 1px solid grey;
+}
+
+.contact .form form .btn button{
+    width: 160px;
+}
+
+/* teams */
+.team{
+    width: 100%;
+    background-color: #fff;
+}
+.team .title{
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+.team .title h1{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 25px;
+    color: blue;
+}
+.team .title h1::before{
+    content: " ";
+    position: absolute;
+    background-color: blue;
+    margin-top: 20px ;
+    width: 20%;
+    height: 2px;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.team .title h1::after{
+    content: "Who with us";
+    position: absolute;
+    font-size: 12px;
+    background-color: #fff;
+    width: 8%;
+    bottom: -14px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.box-3{
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0;
+    display: flex;
+}
+.card-5{
+    width: 30%;
+    padding: 0 10px;
+    border-radius: 7px;
+}
+.card-content{
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.card-content:hover{
+    transform: scale(1.1);
+}
+.card-5 .card-content .img {
+    height: 52%;
+    overflow: hidden;
+}
+.card-5 .img img{
+    width: 100%;
+    height: 100%;
+
+}
+.capt{
+    text-align: center;
+}
+.capt h3{
+    padding: 5px ;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: blue;
+}
+.capt p{
+    padding:0 5px ;
+    text-align: justify;
+    color: #fff;
+    background-color: #111;
+}
+
+/* box */
+.box{
+    width: 100%;
+    padding:30px 10%;
+    background-size: cover;
+    
+}
+.box .box-content{
+    padding:10px;
+    display: flex;
+    background-color: #eee;
+    justify-content: space-between;
+}
+.card{
+    width: 25%;
+    place-items: center;
+    margin: 5px;
+    padding:7px 0;
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0,0.256);
+    text-align: center;
+    transition: all .3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #fff;
+}
+.heading{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 10px;
+}
+.heading::after{
+    content: "a perfect way to show your hospital services";
+    color:grey;
+    font-size: 15px;
+    font-style: italic;
+
+}
+.box-content .info h1{
+    text-transform: capitalize;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    
+}
+.box-content .info p{
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 10px;
+    text-align: justify;
+    color: grey;
+    
+}
+.box-content .pic img{  
+    position: relative;
+    width: 95%;
+    border-radius: 0%;
+    object-fit: cover;
+}
+h1::after{
+    content: "\dytyt
+    ";
+}
+
+/* middle */
+.mid{
+    padding:10px 10%;
+    height: 400px;
+    background-image: url(img/hospital.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mid .para{
+    margin:120px 20px;
+    height: 220px;
+    text-align: center;
+    
+}
+.mid q{
+    margin: 0px;
+    text-align: justify;
+    font-size: 2rem;
+}
+.mid q::first-letter{
+    font-size: 3rem;
+    color: red;
+}
+/* footer */
+
+footer{
+    padding: 20px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(65, 58, 58);
+    color: white;
+}
+footer .foot{
+    width: 32%;
+    padding: 20px;
+}
+.foot h1{
+    font-variant: normal;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.foot .para{
+    padding: 10px 0;
+    text-align: justify;
+}
+.foot .sub{
+    display: flex;
+    padding: 0px;
+    justify-content: space-around;
+}
+.sub sub1{
+    margin-right: px;
+}
+.sub li{
+    margin: 5px 0;
+    list-style: none;
+}
+.footer{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 10px 0;
+}
+.footer h4{
+    font-weight: 500;
+}
+@media screen and (max-width:567px){
+    
+footer{
+    padding: 20px 8%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(65, 58, 58);
+    color: white;
+    text-align: left;
+}
+.foot{
+    text-align: left;
+}
+.foot h1{
+    font-variant: normal;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.foot .para{
+    padding: 10px 0;
+}
+.foot .sub{
+    width: 250%;
+    text-align: justify;
+    display: flex;
+    flex-direction:row;
+}}
