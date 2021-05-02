@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Teams</title>
 </head>
 <body>
     <div class="hospital">
         <header>
             <div class="logo"><h4>Sanjivani </h4><span>Hospital</span></div>
-            <nav>
+            <nav id="show">
                 <li><a href="index.html" >Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html" >About us</a></li>
                 <li><a href="teams.html" class="active">Our Teams</a></li>
                 <li><a href="contact.html">Contact us</a></li>
             </nav>
+            <span1 onclick="l1()" id="l1"></span1><span2 onclick="l2()" id="l2"></span2>
+
             </div>
         </header>
         
@@ -155,5 +157,26 @@
     </div>
     </div>
     
+    
+    <script>
+        function l1(){
+
+            var s = document.getElementById('show');
+            var a = document.getElementById('l1');
+            var b = document.getElementById('l2');
+            s.style.display="block";
+            a.style.display="none";
+            b.style.display="block";
+        }
+
+        function l2(){
+            var s = document.getElementById('show');
+            var a = document.getElementById('l1');
+            var b = document.getElementById('l2');
+            s.style.display="none";
+            a.style.display="block";
+            b.style.display="none";
+        }
+    </script>
 </body>
 </html>
